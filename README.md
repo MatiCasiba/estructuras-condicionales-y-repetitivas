@@ -35,3 +35,18 @@ for (let i = 1; i <= cantidadDeGatos; i++ ){ # inicio en 1, si 1 es menor o igua
 }
 ```
 * Nota: .repeat() se encarga de repetir el numero de veces que se indique.
+
+## Punto c
+Usando el mismo código del anterior, se pidio que ahora se alternara el emoticon del gato, osea que se muestren 2 gatos, al momento de crearlo, utilizé una lista con esto dos emoticones:
+```sh
+var cantidadDeGatos = Number(prompt('Ingrese la cantidad de gatos: '))
+var cantidadDePasos = Number(prompt('Ingrese la cantidad de pasos: '))
+let gatos = ['🐈', '🐈‍⬛']
+let paso = '🐾'
+for (let i=1; i <= cantidadDeGatos; i++){
+  let cantPasitos = paso.repeat(cantidadDePasos) # repite el emoticon que se encuentra dentro de paso, la cantidad de veces que sea indicada
+  let gatoAlternado = gatos[(i-1) % gatos.length] # quien se encarga de alternar los gatos es esta linea de código
+  console.log(`Gato #${i}: ${gatoAlternado} ${cantPasitos}`)
+}
+```
+* gatoAlternado: i-1 asegura que el índicie comience desde 0, gatos.length su valor es de 2, entonces el módulo %2 alterna entre 0 y 1. Si i es impar mostrará el gato claro y si es par mostrará el gato oscuro. 
