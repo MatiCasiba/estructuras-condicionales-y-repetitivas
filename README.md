@@ -21,3 +21,17 @@ i=3 -> (3-1) % 3 = 2 % 3 = 2 -> arrayGatos[2] 😹
 i=4 -> (4-1) % 3 = 3 % 3 = 0 -> arrayGatos[0] 😺
 ```
 * Explicacion de la cuenta: Por que 1%3= 1 ? tengo a % b, a(1) y b(3), si a < b, el resto siempre será igual a el valor de a, porque no puede dividirse completamente por b. Si a >= b, se calcula el modulo tomando el número de sobra despues de la division.
+
+## Punto b
+Se pidio crear un programita que muestre en consola la cantidad de gatos que ingresa el usuario y al lado de estos, las cantidades de pasos. Para lograrlo, lo trabajé de la siguiente forma:
+```sh
+var cantidadDeGatos = Number(prompt('Ingrese la cantidad de gatos: '))
+var cantidadDePasos = Number(prompt('Ingrese la cantidad de pasos: '))
+let gato = '🐈'
+let pasos = '🐾'
+for (let i = 1; i <= cantidadDeGatos; i++ ){ # inicio en 1, si 1 es menor o igual a la cantidad de gatos, entonces que incremente hasta llegar al número ingresado
+  let cantiPasitos = pasos.repeat(cantidadDePasos) # utilizo el emoticon tipo string y lo repito según lo que haya ingresado el usuario en cantidadDePasos
+  console.log(`Gatos # ${i}: ${gato} ${cantiPasitos}`)
+}
+```
+* Nota: .repeat() se encarga de repetir el numero de veces que se indique.
