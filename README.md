@@ -49,4 +49,18 @@ for (let i=1; i <= cantidadDeGatos; i++){
   console.log(`Gato #${i}: ${gatoAlternado} ${cantPasitos}`)
 }
 ```
-* gatoAlternado: i-1 asegura que el índicie comience desde 0, gatos.length su valor es de 2, entonces el módulo %2 alterna entre 0 y 1. Si i es impar mostrará el gato claro y si es par mostrará el gato oscuro. 
+* gatoAlternado: i-1 asegura que el índicie comience desde 0, gatos.length su valor es de 2, entonces el módulo %2 alterna entre 0 y 1. Si i es impar mostrará el gato claro y si es par mostrará el gato oscuro.
+
+## Modificacion (agrego 2 archivos js y cambios en el archivo index.html)
+Las consignas anteriores ahora estarán divididas, main.js tendrá la consigna A, punto-b.js tendrá la consigna B y punto-c.js tendrá la consigna C. Para que estos funcionen, dentro del archivo index.html estaré agregando 2 script:
+```sh
+<body>
+    <h1>Desafio 09</h1>
+    <h2>Estructuras condicionales y repetitivas</h2>
+    
+    <script type="module" src="/src/main.js"></script> # se encuentra la consigna A
+    <script type="module" src="/src/punto-b.js"></script> # nuevo
+    <script type="module" src="/src/punto-c.js"></script> # nuevo
+  </body>
+```
+Por lo que las 2 consignas B y C que se encontraban en main.js, ya no estarán más en ese archivo.
